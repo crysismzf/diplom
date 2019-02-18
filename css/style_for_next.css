@@ -1,3 +1,6 @@
+
+
+/*Рабочая версия!!!*/
 *{
     margin: 0;
     padding: 0;
@@ -57,9 +60,9 @@ nav {
 }
 
 nav:hover {
-     transition: 1s;
-     opacity: 1;
- }
+    transition: 1s;
+    opacity: 1;
+}
 nav:active {
     transition: 1s;
     opacity: 0.5;
@@ -178,27 +181,29 @@ img {
 }
 
 /*Далее идут стили для второй страницы*/
-/*Это ид для втростепенных страниц (лучше исправить)*/
-#header_for_next_page {
-    width: 100%;
-    height: 300px;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-}
-
 .conteiner_for_album {
     /*height: 800px;*/
     margin: 2%;
     display: flex;
     flex-direction: row;
     width: 100%;
-    /*justify-content: left;*/
+
+    justify-content: left;
+
     position: relative;
     flex-wrap: wrap;
 }
 
-
+/*.row_album {*/
+/*display: flex;*/
+/*flex-direction: row;*/
+/*width: 100%;*/
+/*justify-content: space-around;*/
+/*align-items: left;*/
+/*position: relative;*/
+/*flex-wrap: wrap;*/
+/*!*border-bottom: 2px solid grey;*!*/
+/*}*/
 .album {
     margin: 5%;
     display: inline-block;
