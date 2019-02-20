@@ -84,14 +84,13 @@ nav:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
     position: relative;
     font-family: 'Dancing Script', cursive;
     text-align: center;
     font-size: 4em;
     color: black;
     padding-bottom: 10%;
-
+    z-index: 2;
 }
 
 section {
@@ -205,6 +204,10 @@ img {
     z-index: 2;
 }
 
+.preview_album {
+    box-shadow: 0 0 5px 2px;
+}
+
 .name_album {
     text-align: center;
     margin: 5px;
@@ -212,9 +215,21 @@ img {
 
 footer {
     background-color: rgba(145, 140, 140);
-    color: white;
+
     position: relative;
     width: 100%;
-    height: 100px;
+
+    /*height: 100px;*/
     z-index: 2;
+}
+.social_net {
+    justify-content: left;
+    word-spacing: 20px;
+    padding: 10px;
+    /*position: static;*/
+    font-size: 2em;
+}
+.general_iformation {
+    text-align: center;
+    padding: 10px;
 }
