@@ -77,10 +77,6 @@ nav:hover{
     height: 100%;
 }
 
-
-
-
-
 /*размеры подложки зависят от ширины экрана*/
 .background_for_header {
     width: 100%;
@@ -202,7 +198,7 @@ img {
     z-index: 2;
 }
 
-.album {
+.album, .foto_portfolio {
     margin: 5%;
     display: flex;
     flex-direction: column;
