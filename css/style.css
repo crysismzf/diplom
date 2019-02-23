@@ -43,7 +43,7 @@ header {
     z-index: 1;
 }
 
-nav {
+#nav_main_page, nav {
     margin-top: 3%;
     width: 100%;
     min-height: 80px;
@@ -56,16 +56,28 @@ nav {
     opacity: 0.5;
 }
 
+nav {
+    background: rgba(145, 140, 140,0.5);
+    opacity: 1;
+}
+
+#nav_main_page:hover {
+    transition: 1s;
+    opacity: 1;
+}
+
+nav:hover{
+    transition: 1s;
+    background: grey;
+}
+
 .menu_row {
     font-size: 1.5em;
     display: block;
     height: 100%;
 }
 
-nav:hover {
-     transition: 1s;
-     opacity: 1;
-}
+
 
 
 
@@ -102,6 +114,8 @@ nav:hover {
 
 section {
     width: 100%;
+    /*Перепроверить высоту*/
+    min-height: 500px;
     font-size: 1.5em;
     display: flex;
     justify-content: center;
@@ -175,7 +189,7 @@ img {
     position: relative;
 }
 
-/*Далее идут стили для второй страницы*/
+/*Далее идут стили для портфолио*/
 
 .conteiner_for_album {
     margin: 2%;
@@ -212,6 +226,31 @@ img {
     text-align: center;
     margin: 5px;
 }
+/*Далее идут стили для страницы услуг*/
+table {
+    margin: 2%;
+    border: 1px;
+    padding: 20px;
+}
+
+td {
+    /*text-align: center;*/
+    text-align: justify;
+    padding: 10px;
+
+ }
+.td_service {
+    width: 20%;
+    text-align: center;
+}
+
+.td_cost {
+    width: 10%;
+    text-align: center;
+}
+
+/*Ниже для стили для страницы контакты*/
+
 
 footer {
     background-color: rgba(145, 140, 140);
