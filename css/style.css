@@ -222,6 +222,32 @@ img {
     text-align: center;
     margin: 5px;
 }
+/*Далее идут стили для страницы с альбомом*/
+.background_for_foto {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(145, 140, 140, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 4;
+}
+
+.max_foto {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    /*z-index: 4;*/
+
+}
+.max_foto img {
+    max-height: 80%;
+}
+
 /*Далее идут стили для страницы услуг*/
 table {
     margin: 2%;
