@@ -20,8 +20,6 @@ $(function(e) {
 
 });
 
-
-
 function startSlideShow() {
     el = $(this);
     var src = $(this).children("img").attr("src");
@@ -49,7 +47,7 @@ function turnBackFoto(event) {
 function turnForwardFoto(event) {
     event.stopPropagation();
     el_forwd = $(el).next().children("img").attr("src");
-    if (el_back!==undefined) {
+    if (el_forwd!==undefined) {
         el = $(el).next();
         $(".max_foto").children().attr("src", el_forwd);
     } else {
