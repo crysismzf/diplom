@@ -12,7 +12,7 @@ $(function(e) {
 	// Открытие слайдшоу
 	$(".foto_portfolio").click(startSlideShow);
 	// Закрытие слайдшоу
-    $(document).on('click', '.background_for_foto', closeSlideShow);
+    $(document).on('click', '.max_foto', closeSlideShow);
     // Листает фото влево
     $(document).on('click', '.turn_back', turnBackFoto);
     // Листает фото вправо
@@ -35,7 +35,7 @@ function closeSlideShow() {
 
 function turnBackFoto(event) {
     event.stopPropagation();
-    el_back = $(el).prev().children("img").attr("src");
+     el_back = $(el).prev().children("img").attr("src");
     if (el_back!==undefined) {
         el = $(el).prev();
         $(".max_foto").children().attr("src", el_back);
