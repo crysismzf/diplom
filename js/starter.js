@@ -16,8 +16,10 @@ $(function(e) {
     // Листает фото влево
     $(document).on('click', '.turn_back', turnBackFoto);
     // Листает фото вправо
-    $(document).on('click', '.turn_forward', turnForwardFoto)
-
+    $(document).on('click', '.turn_forward', turnForwardFoto);
+    // Открывает мадальное окно меню (только для телефонов)
+    $(document).on('click', '.menu_for_phone', openMenu);
+    $(document).on('click', '.close_mod_win', closeMenu);
 });
 
 function startSlideShow() {
@@ -54,3 +56,12 @@ function turnForwardFoto(event) {
         closeSlideShow();
     };
 };
+
+function openMenu() {
+    $(".modal_win_menu").css('display','flex');
+    console.log("6766");
+}
+
+function closeMenu() {
+    $(".modal_win_menu").css('display','none');
+}
