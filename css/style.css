@@ -126,6 +126,7 @@ nav:hover{
 .text_for_header {
     width: 100%;
     height: 100%;
+    min-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,7 +180,6 @@ section {
 }
 
 /*Нужно будет переделать*/
-
 img {
     width: 100%;
     height: auto;
@@ -216,7 +216,6 @@ img {
 }
 
 /*Далее идут стили для портфолио*/
-
 .conteiner_for_album {
     margin: 2%;
     display: flex;
@@ -256,6 +255,11 @@ img {
     margin: 5px;
 }
 /*Далее идут стили для страницы с альбомом*/
+aside {
+    margin: 2% 2% 0% 2%;
+    font-size: 1.2em;
+    text-align: justify;
+}
 .foto_portfolio img {
     border: 2px solid grey;
 }
@@ -265,25 +269,27 @@ img {
     height: 100%;
     position: fixed;
     font-size: 3em;
-    top: 0px;
-    left: 0px;
+    /*top: 0px;*/
+    /*left: 0px;*/
     background: rgba(145, 140, 140, 0.8);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 4;
 }
 
 .max_foto {
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    margin: auto;
+    /*justify-content: space-between;*/
     max-width: 100%;
-    max-height: 80%;
+    max-height: 100%;
+    z-index: 5;
 }
 
 .max_foto img {
-    max-height: 80%;
+    max-height: 100%;
 
 }
 
@@ -342,15 +348,54 @@ footer {
     text-align: center;
     padding: 10px;
 }
+@media (max-width: 1800px){
+body {
+    font-size: 12px;
+}
+    .menu_row {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #header_main_page {
+        height: 800px;
+    }
+    header {
+        height: 300px;
+    }
+    .max_foto {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        /*margin-bottom: 10%;*/
+        /*width: 60%;*/
+        /*height: 80%;*/
+        /*max-width: 60%;*/
+        /*max-height: 80%;*/
+    }
+    .max_foto img {
+        max-width: 900px;
+        max-height: 600px;
+        /*max-height: 60%;*/
+    }
+    .turn_back, .turn_forward {
+        /*display: block;*/
+        /*max-width: 20%;*/
+        text-align: center;
+        z-index: 5;
+    }
+
+}
 
 @media (max-width: 1400px) {
-
     body {
-        font-size: 12px;
+        font-size: 10px;
     }
     .menu_row {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    img {
+        max-height: 400px;
     }
     #header_main_page {
         height: 600px;
@@ -359,15 +404,30 @@ footer {
         height: 200px;
     }
     .max_foto {
-        display: flex;
-        justify-content: space-between;
-        max-width: 60%;
-        max-height: 80%;
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        /*margin-bottom: 10%;*/
+        /*width: 60%;*/
+        /*height: 80%;*/
+        /*max-width: 60%;*/
+        /*max-height: 80%;*/
+    }
+    .max_foto img {
+       max-width: 900px;
+        max-height: 600px;
+        /*max-height: 60%;*/
+    }
+    .turn_back, .turn_forward {
+        /*display: block;*/
+        /*max-width: 20%;*/
+        text-align: center;
+        z-index: 5;
     }
 
 }
 
-@media (max-width: 810px) {
+@media (max-width: 1000px) {
 
     body {
         font-size: 10px;
@@ -377,32 +437,50 @@ footer {
         padding-bottom: 20px;
     }
     #header_main_page {
-        height: 400px;
+        height: 500px;
     }
     header {
         height: 200px;
     }
     .background_for_header {
-        height: 50%;
+        height: 100%;
         max-height: 1000px;
         min-height: 300px;
     }
+    .text_for_header {}
     section {
         min-height: 700px;
     }
     .elementRow {
         flex-direction: column;
     }
-    .max_foto {
-        display: flex;
-        justify-content: space-between;
-        max-width: 80%;
-        max-height: 80%;
-    }
+    /*.max_foto {*/
+        /*display: flex;*/
+        /*justify-content: space-between;*/
+        /*max-width: 80%;*/
+        /*max-height: 80%;*/
+    /*}*/
 
 }
+@media (max-width: 810px) {
+    #header_main_page {
+        height: 500px;
+    }
+    header {
+        height: 300px;
+    }
+    .background_for_header {
+        height: 70%;
+        max-height: 1000px;
+        min-height: 300px;
+    }
+
+    section {
+        min-height: 700px;
+    }
+}
 /*перепроверить дублирующие селекторы*/
-@media (max-width: 600px) {
+@media (max-width: 740px) {
     body {
         font-size: 8px;
     }
@@ -410,10 +488,59 @@ footer {
         height: 250px;
     }
     header {
-        height: 150px;
+        height: 200px;
     }
     h1 {
         font-size: 2em;
+    }
+    #nav_main_page, nav {
+        justify-content: right;
+
+    }
+    .menu_row {
+        display: none;
+    }
+    .menu_for_phone {
+        display: block;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .about_disainer {
+        flex-direction: column;
+    }
+    .foto_by_disainer  {
+        width: 80%;
+    }
+    .conteiner_for_album {
+        flex-direction: column;
+    }
+    .album {
+        max-width: 90%;
+    }
+    .foto_portfolio {
+        max-width: 90%;
+    }
+    section {
+        min-height: 400px;
+    }
+}
+@media (max-width: 450px) {
+    body {
+        font-size: 8px;
+    }
+    #header_main_page {
+        height: 300px;
+    }
+    header {
+        height: 250px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .background_for_header {
+        height: 50%;
+        max-height: 1000px;
+        min-height: 300px;
     }
     #nav_main_page, nav {
         justify-content: right;
@@ -447,49 +574,23 @@ footer {
 }
 @media (max-width: 400px) {
     body {
-        font-size: 8px;
+        font-size: 6px;
     }
     #header_main_page {
-        height: 300px;
+        height: 250px;
     }
     header {
-        height: 150px;
+        height: 250px;
     }
     h1 {
         font-size: 1.5em;
     }
-    #nav_main_page, nav {
-        justify-content: right;
-
+    .background_for_header {
+        height: 50%;
+        max-height: 1000px;
+        min-height: 300px;
     }
-    .menu_row {
-        display: none;
-    }
-    .menu_for_phone {
-        display: block;
-        padding-right: 5%;
-    }
-    .about_disainer {
-        flex-direction: column;
-    }
-    .foto_by_disainer  {
-        width: 80%;
-    }
-    .conteiner_for_album {
-        flex-direction: column;
-    }
-    .album {
-        max-width: 90%;
-    }
-    .foto_portfolio {
-        max-width: 90%;
-    }
-    section {
-        min-height: 400px;
-    }
-}
-@media (max-height: 400px) {
-    .max_foto {
-        width: 60%;
-    }
+    /*.text_for_header {*/
+        /*height: 200px;*/
+    /*}*/
 }
